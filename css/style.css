@@ -1,0 +1,197 @@
+html, body, figure, figcaption, ul, li, h1 {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  text-align: inherit;
+  font-family: 'Rubik', sans-serif;
+}
+
+ul {
+  list-style: none;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  color: inherit;
+  /* 1 */
+  font: inherit;
+  /* 2 */
+  margin: 0;
+  /* 3 */
+}
+
+.group:after {
+  content: "";
+  clear: both;
+  display: block;
+}
+
+
+.size-3, .size-2, .size-1 {
+  height: 50px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+.size-3 {
+  width: 300px;
+  background-color: #009E60;
+  border: 1px solid #009E60;
+}
+
+.size-2 {
+  width: 200px;
+  background-color: #00c87a;
+  border: 1px solid #00c87a;
+}
+
+.size-1 {
+  width: 100px;
+  background-color: #00f394;
+  border: 1px solid #00f394;
+}
+
+.tower, .tower-empty, .tower-selected {
+  transition: all .4s ease-out;
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: flex-start;
+  align-items: center;
+  border-bottom: 15px solid black;
+  min-width: 340px;
+  max-width: 340px;
+
+  height: 200px;
+}
+
+.tower:hover {
+  transition: all .4s ease-out;
+  border-bottom: 20px solid #0051BA;
+}
+
+.tower-selected {
+  transition: all .4s ease-out;
+  border-bottom: 20px solid #C41E3A;;
+}
+
+.towers {
+  /*max-width: 1100px;*/
+  display: flex;
+  justify-content: space-between;
+  flex-wrap:wrap;
+
+}
+
+.hanoi {
+  margin: auto;
+  max-width: 1100px;
+
+}
+h1 {
+  font-size: 80px;
+  color: #0051BA;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+
+.won {
+  width: 150;
+  height: 150;
+  background: rgba(255, 0, 0, 0.5);
+}
+
+/* The Modal (background) */
+.modal {
+    /*display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    font-size: 30px;
+    color: #C41E3A;
+    text-align: center;
+    width: 40%; /* Could be more or less, depending on screen size */
+}
+.again-button {
+  display: flex;
+  justify-content: center;
+  margin: 50px;
+}
+
+
+
+.again-button > *:hover {
+
+
+  position: relative;
+  cursor: pointer;
+  display: inline-block;
+  overflow: hidden;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  vertical-align: middle;
+  z-index: 1;
+  will-change: opacity, transform;
+  transition: all .3s ease-out;
+  background-color: rgba(196, 30, 0, 0.45);
+}
+
+.again-button * {
+  border: none;
+  border-radius: 2px;
+  display: inline-block;
+  height: 36px;
+  line-height: 36px;
+  outline: 0;
+  padding: 0 2rem;
+  text-transform: uppercase;
+  vertical-align: middle;
+  -webkit-tap-highlight-color: transparent;
+  text-decoration: none;
+  color: #fff;
+  background-color: #C41E3A;
+  text-align: center;
+  letter-spacing: .5px;
+  transition: .2s ease-out;
+  cursor: pointer;
+
+}
+
+
+@media screen and (max-width: 970px) {
+    .towers {
+        flex-direction: column;
+        max-width: 350px;
+    }
+
+    .hanoi {
+      display: flex;
+      justify-content: center;
+
+    }
+    .tower, .tower-selected, .tower-empty {
+      margin-bottom: 20px;
+    }
+}
